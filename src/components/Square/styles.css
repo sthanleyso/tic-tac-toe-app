@@ -1,0 +1,13 @@
+.square {
+  width: 50px;
+  height: 50px;
+  color: #6c5ce7;
+  background-color: transparent;
+  border: 1px solid #2d3436;
+}
+
+.square:hover {
+  opacity: .5;
+  transition: .3s;
+  cursor: pointer;
+}

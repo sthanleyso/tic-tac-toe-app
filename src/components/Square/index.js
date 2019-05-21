@@ -1,11 +1,15 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import './styles.css';
 
-const Square = () => (
-  <div>
-    <button>X</button>
-  </div>
-);
+const Square = () => {
+  function handleClick() {
+    console.log('Button clicked');
+  }
+
+  return (
+    <button className="square" onClick={handleClick}>X</button>
+  );
+};
 
 export default Square;
