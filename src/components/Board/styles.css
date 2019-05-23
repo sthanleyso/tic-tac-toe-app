@@ -1,0 +1,8 @@
+.board-container {
+  background-color: #ecf0f1;
+  width: 330px;
+  height: 330px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 6px;
+}
