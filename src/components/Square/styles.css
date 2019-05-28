@@ -1,13 +1,17 @@
 .square {
   width: 33.333%;
   height: 33.333%;
-  font-size: 50px;
-  font-weight: bold;
-  color: #6c5ce7;
-  padding: 50px;
   background-color: transparent;
   border: 1px solid #2d3436;
   transition: .3s;
+  vertical-align: top;
+}
+
+span {
+  font-size: 50px;
+  font-weight: bold;
+  color: #6c5ce7;
+  padding: 25px 25px 25px 25px;
 }
 
 .square:hover {

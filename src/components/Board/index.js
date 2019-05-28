@@ -1,24 +1,30 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import Square from '../Square';
 
 import './styles.css';
 
-const Board = () => {
-  function renderSquare() {
-    const squares = [];
+class Board extends Component {
+  state = {
+    squares: Array(9).fill(null)
+  };
 
-    for (let i = 0; i < 9; i++) {
-      squares.push(<Square key={i} />);
-    }
+  render() {
+    const [ ...squares ] = this.state.squares;
 
-    return squares;
+    return (
+      <div className="board-container">
+        {squares.map((square, index) => {
+          return (
+            <Square
+              key={index}
+              onClick={this.props.onClick} 
+            />
+          );
+        })}
+      </div>
+    );
   }
-
-  return (
-    <div className="board-container">
-      {renderSquare()}
-    </div>
-  );
-};
+}
 
 export default Board;

@@ -2,10 +2,12 @@ import React from 'react';
 
 import './styles.css';
 
-const Square = () => {
+const Square = ({ onClick }) => {
   return (
-    <button id="btn" className="square"></button>
+    <button className="square" onClick={onClick}>
+      <span></span>
+    </button>
   );
-};
+}
 
 export default Square;

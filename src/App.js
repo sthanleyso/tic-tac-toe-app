@@ -2,8 +2,8 @@ import React from 'react';
 
 import './App.css'
 
-import Home from './pages/Home';
+import Game from './pages/Game';
 
-const App = () => <Home />;
+const App = () => <Game />;
 
 export default App;
