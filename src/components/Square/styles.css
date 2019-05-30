@@ -2,7 +2,7 @@
   width: 33.333%;
   height: 33.333%;
   background-color: transparent;
-  border: 1px solid #2d3436;
+  border: 1px solid #bdc3c7;
   transition: .3s;
   vertical-align: top;
 }
@@ -10,8 +10,9 @@
 span {
   font-size: 50px;
   font-weight: bold;
+  line-height: 34px;
   color: #6c5ce7;
-  padding: 25px 25px 25px 25px;
+  padding: 0;
 }
 
 .square:hover {

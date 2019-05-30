@@ -5,12 +5,8 @@ import Square from '../Square';
 import './styles.css';
 
 class Board extends Component {
-  state = {
-    squares: Array(9).fill(null)
-  };
-
   render() {
-    const [ ...squares ] = this.state.squares;
+    const [ ...squares ] = this.props.squares;
 
     return (
       <div className="board-container">
@@ -18,7 +14,8 @@ class Board extends Component {
           return (
             <Square
               key={index}
-              onClick={this.props.onClick} 
+              value={square}
+              onClick={this.props.onClick}
             />
           );
         })}

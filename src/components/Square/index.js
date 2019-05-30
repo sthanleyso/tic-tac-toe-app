@@ -2,10 +2,10 @@ import React from 'react';
 
 import './styles.css';
 
-const Square = ({ onClick }) => {
+const Square = (props) => {
   return (
-    <button className="square" onClick={onClick}>
-      <span></span>
+    <button className="square" onClick={props.onClick}>
+      <span>{props.value}</span>
     </button>
   );
 }

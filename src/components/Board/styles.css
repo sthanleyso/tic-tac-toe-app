@@ -6,3 +6,7 @@
   padding: 10px;
   border-radius: 6px;
 }
+
+.board-container:after {
+  display: table;
+}
