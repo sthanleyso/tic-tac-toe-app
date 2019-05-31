@@ -1,4 +1,4 @@
-.square {
+.square__btn {
   width: 33.333%;
   height: 33.333%;
   background-color: transparent;
@@ -7,7 +7,7 @@
   vertical-align: top;
 }
 
-span {
+.square__btn--span {
   font-size: 50px;
   font-weight: bold;
   line-height: 34px;
@@ -15,8 +15,7 @@ span {
   padding: 0;
 }
 
-.square:hover {
-  opacity: .5;
+.square__btn:hover {
   transition: .3s;
   cursor: pointer;
 }

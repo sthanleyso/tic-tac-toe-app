@@ -9,13 +9,13 @@ class Board extends Component {
     const [ ...squares ] = this.props.squares;
 
     return (
-      <div className="board-container">
+      <div className="board__container">
         {squares.map((square, index) => {
           return (
             <Square
               key={index}
               value={square}
-              onClick={this.props.onClick}
+              onClick={() => this.props.onClick(index)}
             />
           );
         })}

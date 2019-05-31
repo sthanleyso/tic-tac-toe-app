@@ -7,7 +7,7 @@ const NextPlayer = (props) => {
 
   return (
     <>
-      <p className="next-player" >Next Player: {xIsNext ? 'X' : 'O'}</p>
+      <p className="next__player" >Next Player: {xIsNext ? 'X' : 'O'}</p>
     </>
   );
 };

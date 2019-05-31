@@ -1,4 +1,4 @@
-.board-container {
+.board__container {
   background-color: #ecf0f1;
   width: 330px;
   height: 330px;
@@ -7,6 +7,6 @@
   border-radius: 6px;
 }
 
-.board-container:after {
+.board__container:after {
   display: table;
 }

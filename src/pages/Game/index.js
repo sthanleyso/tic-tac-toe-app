@@ -12,21 +12,26 @@ class Game extends Component {
     xIsNext: true
   };
 
-  handleClick = () => {
+  handleClick = i => {
+    const { squares, xIsNext } = this.state;
+
+    if (squares[i] !== null) return;
+    else squares[i] = xIsNext ? 'X' : 'O';
+
     this.setState({
+      squares,
       xIsNext: !this.state.xIsNext
     });
   };
 
   render() {
     const { xIsNext, squares } = this.state;
-    // const value = xIsNext ? 'X' : 'O';
 
     return (
-      <div className="game-container">
+      <div className="game__container">
         <Board squares={squares} onClick={this.handleClick} />
-        <div className="info-container">
-          <p className="game-title">Tic-Tac Toe</p>
+        <div className="info__container">
+          <p className="game__title">Tic-Tac Toe</p>
           <NextPlayer xIsNext={xIsNext} />
           <History />
         </div>
