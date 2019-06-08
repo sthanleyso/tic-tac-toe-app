@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import Square from '../Square';
 
-import './styles.css';
+import { Container } from './styles';
 
 class Board extends Component {
   render() {
-    const [ ...squares ] = this.props.squares;
+    const [...squares] = this.props.squares;
 
     return (
-      <div className="board__container">
+      <Container>
         {squares.map((square, index) => {
           return (
             <Square
@@ -19,7 +19,7 @@ class Board extends Component {
             />
           );
         })}
-      </div>
+      </Container>
     );
   }
 }

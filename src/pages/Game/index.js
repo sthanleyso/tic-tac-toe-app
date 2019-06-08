@@ -4,7 +4,7 @@ import Board from '../../components/Board';
 import NextPlayer from '../../components/NextPlayer';
 import History from '../../components/History';
 
-import './styles.css';
+import { Container, Info, Title, TitlePhone } from './styles';
 
 class Game extends Component {
   state = {
@@ -20,22 +20,31 @@ class Game extends Component {
 
     this.setState({
       squares,
-      xIsNext: !this.state.xIsNext
+      xIsNext: !xIsNext
     });
+  };
+
+  componentWillUpdate() {}
+
+  handleStartClick = () => {
+    const { isGameOn } = this.state;
+
+    this.setState({ isGameOn: !isGameOn });
   };
 
   render() {
     const { xIsNext, squares } = this.state;
 
     return (
-      <div className="game__container">
+      <Container>
+        <TitlePhone>Tic-Tac Toe</TitlePhone>
         <Board squares={squares} onClick={this.handleClick} />
-        <div className="info__container">
-          <p className="game__title">Tic-Tac Toe</p>
+        <Info>
+          <Title>Tic-Tac Toe</Title>
           <NextPlayer xIsNext={xIsNext} />
           <History />
-        </div>
-      </div>
+        </Info>
+      </Container>
     );
   }
 }

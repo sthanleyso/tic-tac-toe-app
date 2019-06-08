@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './styles.css';
+import { Button } from './styles';
 
 const Square = (props) => {
   return (
-    <button className="square__btn" onClick={props.onClick}>
-      <span className="square__btn--span">{props.value}</span>
-    </button>
+    <Button onClick={props.onClick}>
+      <span>{props.value}</span>
+    </Button>
   );
 }
 

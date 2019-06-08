@@ -1,15 +1,11 @@
 import React from 'react';
 
-import './styles.css';
+import { Text } from './styles';
 
-const NextPlayer = (props) => {
+const NextPlayer = props => {
   const { xIsNext } = props;
 
-  return (
-    <>
-      <p className="next__player" >Next Player: {xIsNext ? 'X' : 'O'}</p>
-    </>
-  );
+  return <Text xIsNext>Next Player: {xIsNext ? 'X' : 'O'}</Text>;
 };
 
 export default NextPlayer;
